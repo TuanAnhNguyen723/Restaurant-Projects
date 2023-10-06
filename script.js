@@ -21,3 +21,33 @@ document.addEventListener('click', (e) => {
         document.body.classList.remove('menu-visible');
     }
 })
+
+// SEARCH
+const sTrigger = document.querySelector('.s-trigger');
+const addclass = document.querySelector('.site');
+
+sTrigger.addEventListener('click', () => {
+    addclass.classList.toggle('showsearch')
+})
+
+// SLIDER
+const sliderThumb = new Swiper('.thumb-nav', {
+    spaceBetween: 10,
+    slidesPerview: 3,
+    slidesPerGroup: false,
+    breakpoints: {
+        992: {
+            direction: 'vertical'
+        }
+    }
+});
+
+const theSlider = new Swiper('.thumb-big', {
+    slidePerview: 1,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    thumbs: {
+        swiper: sliderThumb
+    }
+});
