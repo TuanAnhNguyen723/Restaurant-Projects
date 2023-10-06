@@ -534,9 +534,16 @@ main > div {
     color: var(--grey-color);
     transition: var(--trans-co);
 }
-.tabbed nav a:hover {
+.tabbed nav a:hover,
+.tabbed nav li.swiper-slide-thumb-active a {
     color: var(--dark-color);
-}   
+}
+.tabbed nav  li:not(.swiper-slide-thumb-active) a::after {
+    opacity: 0;
+}  
+.tabbed nav li a:hover::after {
+    opacity: 1;
+}
 .tabbed .products ul {
     display: grid;
     grid-gap: 3em;
@@ -574,6 +581,53 @@ main > div {
 .products .meta .catrate i {
     color: var(--primary-color);
 }
+
+.products .meta h2 {
+    font-size: 1em;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.products .meta h2:hover {
+    text-decoration: underline;
+}
+
+.products .meta button {
+    font-family: inherit;
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    width: calc(100% -60px);
+    border-radius: 5px;
+    background-color: var(--light-color);
+    cursor: pointer;
+    transition: var(--trans-back-co);
+}
+
+.products .meta button:hover {
+    background-color: var(--primary-color);
+}
+.products .meta .like {
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    background-color: var(--light-color);
+    transition: var(--trans-back-co);
+}
+.products .meta .like:hover {
+    background-color: var(--dark-color);
+}
+
+.tabbed nav ul li {
+    width: fit-content !important; 
+}
+
+
 
 
 
