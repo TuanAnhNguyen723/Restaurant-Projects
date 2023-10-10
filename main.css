@@ -811,8 +811,262 @@ footer .copyright{
 
 
 
+/* MODAL CART */
+.js-modal_cart {
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s, opacity 0.5s;
+    /* Thêm kiểu dáng khác cần thiết */
+    z-index: 1000;
+}
+.md_cart_container {
+    background-color: var(--dark-color);
+    width: 600px;
+    position: fixed;
+    right: 0;
+    box-shadow: inset 0 0 0 1px var(--primary-color),
+                      0 0 0 5px #fedc5926;
+    border-radius: 10px 0px 0px 10px;
+    margin: auto;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.js-modal_cart.open {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+     
+}
+
+.md_cart_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--grey-color);
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+}
+
+
+.md_cart_head h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+.md_cart_head i {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 20px;
+    transition: var(--trans-co);
+}
+.md_cart_head i:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#total_money {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.btn-cart {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+.btn-cart:hover {
+    opacity: 60%;
+}
+
+.modal_cart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 11;
+    display: none;
+
+}
+.modal_cart.open {
+    display: block;
+   
+}
+
+.md_box-cart {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+
+.md_box-cart p {
+    margin-left: 20px;
+    color: #373332;
+}
+
+.md_box_food {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px 0 10px;
+    transition: var(--trans-back-co);
+    border-radius: 10px;
+}
+
+.md_box_food p {
+    color: #ffffff;
+}
+
+.md_box_food:hover {
+    background-color: var(--grey-color);
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 18px 36px -18px;
+    border: 0;
+}
+
+.md_box-cart-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.md_box-cart img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    transition: transform .3s, box-shadow .3s, border .3s;
+}
+
+.md_box-add {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.md_box-add:hover {
+    color: #373332;
+    cursor: pointer;
+}
+
+.md_box-add button {
+    
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 8px 0 8px;
+}
+
+.md_box-add button:hover {
+
+    transition: 0.4s;
+}
+
+#total_money {
+
+    font-size: 20px;
+}
+.fa-trash {
+    color: var(--light-color);
+    transition: var(--trans-co);
+}
+.fa-trash:hover {
+    color: var(--primary-color);
+}
+
+
+
+.md_price {
+    color: var(--light-color);
+
+}
+
+
+/* NOTIFICATION */
+#cart-notification {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(-100%);
+    font-size: 14px;
+    z-index: 1000;
+  }
+  
+  #cart-notification.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.animationIn {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
 
 /* RESPONSIVE */
+@media only screen and (max-width: 767px) {
+    .md_cart_container {
+        max-width: 320px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+    }  
+    .md_box_food {
+        font-size: 12px;
+    }
+    .md_box-cart img {
+        height: 50px;
+        width: 50px;
+    }
+    .md_box-add i {
+        font-size: 14px;
+    }
+    .md_cart_head {
+        font-size: 12px;
+    }
+    #total_money {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .md_cart_container {
+        max-width: 600px;
+        width: 100%; /* Đặt lại width thành 100% */
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     .mobile-only {
         display: none;
@@ -854,6 +1108,8 @@ footer .copyright{
         margin: 0 auto;
     }
 
+
+
 }
 
 @media screen and (min-width: 992px) {
@@ -869,6 +1125,7 @@ footer .copyright{
     .slider .thumb-nav .item h4 {
         display: block;
     }
+
 }
 
 
