@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food WebSite</title>
-    <link rel="stylesheet" href="./Login/login.css" />
+    <link rel="stylesheet" href="../View/main.css" />
     <link rel="stylesheet" href="./register/register.html" />
+    <link rel="stylesheet" href="./register.scss" />
     <link rel="stylesheet" href="./Controller/validateUser.php" />
     <link
       rel="stylesheet"
@@ -21,7 +22,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script src="./register/register.js"></script>
   </head>
   <body>
     <div id="page" class="site">
@@ -30,12 +30,13 @@
           <nav>
             <div class="left">
               <div style="font-size: 35px" class="logo">
-                <a href="#">Login</a>
+                <a href="#">Register</a>
               </div>
               <div class="menu">
                 <ul>
                   <li><a href="#home">Home</a></li>
                   <li><a href="#categori">Menu</a></li>
+
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -49,7 +50,7 @@
                 <a href="#" class="m-trigger mobile-only">
                   <i class="fa-solid fa-bars"></i>
                 </a>
-                <a href="./index.html" class="m-trigger">
+                <a href="../index.html" class="m-trigger">
                   <i class="fa-regular fa-user"></i>
                 </a>
               </div>
@@ -57,36 +58,36 @@
           </nav>
         </div>
       </header>
-      <main class="main_login">
-        <div class="container-login">
-          <form action="./Controller/validateUser.php" method="POST">
-            <div class="group">
-              <label for="username">Username:</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                required
-              /><br /><br />
-            </div>
-            <div class="group">
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                required
-              /><br /><br />
-            </div>
-
-            <div class="group">
-              <input type="submit" name="Login" value="Login" /><br /><br />
-            </div>
-          </form>
-
-          <form>
-            Do not have an account
-            <a href="./register/register.html">Register</a>
+      <main>
+        <div class="container_register">
+          <form action="register.php" method="post">
+            <input type="text" name="username" placeholder="User001" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="abc@gmail.com"
+              required
+            />
+            <input
+              type="HoTen"
+              name="HoTen"
+              placeholder="NguyenVanA"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              ,
+              placeholder="0912345678"
+              required
+            />
+            <button type="submit">Register</button>
           </form>
         </div>
       </main>
@@ -152,16 +153,8 @@
       <!-- footer -->
     </div>
     <div class="overlay"></div>
-
-    <!-- Modal structure -->
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Registered successfully! You will be redirected shortly.</p>
-      </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
