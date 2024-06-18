@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,700;1,500&family=Rubik:wght@300;400;500;600&display=swap");
+:root { 
+  --primary-color: #fed330;
+  --secondary-color: #ff2525;
+  --white-color: #ffffff; /* Sửa tên biến thành white-color */
+  --light-color: #f4f4f4;
+  --grey-color: #979b9d;
+  --dark-color: #171820;
+
+  --trans-back-co: background-color 0.3s, color 0.3s;
+  --trans-co: color 0.3s;
+}
+.no-pointer-events {
+  pointer-events: none !important;
+  color: #979b9d !important;
+  cursor: not-allowed !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+body {
+  display: flex;
+}
+
+.dashboard {
+  width: 20%;
+  background-color: var(--dark-color);
+  height: 100vh;
+}
+.main-dashboard {
+  width: 80%;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #cde1f5;
+}
+
+.header a {
+  color: var(--primary-color);
+  text-decoration: none;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 1.8em;
+  font-weight: 600;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 80%;
+}
+
+.menu a {
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #f4f4f4;
+  font-size: 1.1em;
+  gap: 10px;
+  margin: 5px;
+}
+
+.menu a:hover {
+  transform: translateX(10px);
+  transform: translateY(-5px);
+  background-color: #3b82f6;
+  box-shadow: -4px 4px 0px 0px rgba(4, 142, 255, 0.2);
+}
+
+.page {
+  background-color: #f4f4f6;
+  padding: 30px 5%;
+}
+
+.box-dashboard {
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+  border-radius: 5px;
+}
+
+.dashboard-title {
+  width: 100%;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 1.8em;
+  font-weight: 600;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+  background-color: #fff;
+}
+
+.text-red {
+  color: #ef4444;
+}
+
+/* Thêm CSS cho bảng và phân trang */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+.table th,
+.table td {
+  padding: 0.625em;
+  text-align: center;
+}
+.table th {
+  background-color: #f2f2f2;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+.pagination a {
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25em;
+}
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.container-row .title {
+  font-size: 30px;
+  color: #b7b7b7;
+}
+
+th {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Nút active-btn */
+.active-btn {
+  background-color: #4CAF50; /* Màu nền mặc định */
+  color: white; /* Màu chữ */
+  border: none; /* Không có viền */
+  padding: 10px 20px; /* Khoảng đệm trong nút */
+  text-align: center; /* Canh giữa văn bản */
+  text-decoration: none; /* Không gạch chân văn bản */
+  display: inline-block; /* Hiển thị inline block */
+  font-size: 14px; /* Kích thước chữ */
+  margin: 4px 2px; /* Khoảng cách ngoài */
+  cursor: pointer; /* Con trỏ chuột thay đổi khi di chuột vào nút */
+  border-radius: 12px; /* Góc bo tròn của nút */
+  transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */
+}
+
+.active-btn:hover {
+  background-color: #45a049; /* Màu nền khi di chuột */
+  transform: scale(1.05); /* Hiệu ứng phóng to khi di chuột */
+}
+
+.active-btn.not-active {
+  background-color: #f44336; /* Màu nền khi không kích hoạt */
+}
+
+/* Responsive: đảm bảo nút hiển thị tốt trên các thiết bị nhỏ */
+@media (max-width: 600px) {
+  .active-btn {
+      padding: 8px 16px; /* Giảm kích thước khoảng đệm trên thiết bị nhỏ */
+      font-size: 12px; /* Giảm kích thước chữ trên thiết bị nhỏ */
+  }
+}

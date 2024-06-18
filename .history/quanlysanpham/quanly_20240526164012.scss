@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,700;1,500&family=Rubik:wght@300;400;500;600&display=swap");
+:root {
+  --primary-color: #fed330;
+  --secondary-color: #ff2525;
+  --white-color: #ffffff; /* Sửa tên biến thành white-color */
+  --light-color: #f4f4f4;
+  --grey-color: #979b9d;
+  --dark-color: #171820;
+
+  --trans-back-co: background-color 0.3s, color 0.3s;
+  --trans-co: color 0.3s;
+}
+.no-pointer-events {
+  pointer-events: none !important;
+  color: #979b9d !important;
+  cursor: not-allowed !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+body {
+  display: flex;
+}
+
+.dashboard {
+  width: 20%;
+  background-color: var(--dark-color);
+  height: 100vh;
+}
+.main-dashboard {
+  width: 80%;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #cde1f5;
+}
+
+.header a {
+  color: var(--primary-color);
+  text-decoration: none;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 1.8em;
+  font-weight: 600;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 80%;
+}
+
+.menu a {
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #f4f4f4;
+  font-size: 1.1em;
+  gap: 10px;
+  margin: 5px;
+}
+
+.menu a:hover {
+  transform: translateX(10px);
+  transform: translateY(-5px);
+  background-color: #3b82f6;
+  box-shadow: -4px 4px 0px 0px rgba(4, 142, 255, 0.2);
+}
+
+.page {
+  background-color: #f4f4f6;
+  padding: 30px 5%;
+}
+
+.box-dashboard {
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+  border-radius: 5px;
+}
+
+.dashboard-title {
+  width: 100%;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 1.8em;
+  font-weight: 600;
+  box-shadow: 0px 3px 5px 0px rgba(204, 204, 204, 0.4509803922);
+  background-color: #fff;
+}
+
+.text-red {
+  color: #ef4444;
+}
+
+// CSS TABLE
+$table-cell-padding-y: 0.5rem;
+$table-cell-padding-x: 0.5rem;
+$table-cell-padding-y-sm: 0.25rem;
+$table-cell-padding-x-sm: 0.25rem;
+
+$table-cell-vertical-align: top;
+
+$table-color: var(--#{$prefix}emphasis-color);
+$table-bg: var(--#{$prefix}body-bg);
+$table-accent-bg: transparent;
+
+$table-th-font-weight: null;
+
+$table-striped-color: $table-color;
+$table-striped-bg-factor: 0.05;
+$table-striped-bg: rgba(
+  var(--#{$prefix}emphasis-color-rgb),
+  $table-striped-bg-factor
+);
+
+$table-active-color: $table-color;
+$table-active-bg-factor: 0.1;
+$table-active-bg: rgba(
+  var(--#{$prefix}emphasis-color-rgb),
+  $table-active-bg-factor
+);
+
+$table-hover-color: $table-color;
+$table-hover-bg-factor: 0.075;
+$table-hover-bg: rgba(
+  var(--#{$prefix}emphasis-color-rgb),
+  $table-hover-bg-factor
+);
+
+$table-border-factor: 0.2;
+$table-border-width: var(--#{$prefix}border-width);
+$table-border-color: var(--#{$prefix}border-color);
+
+$table-striped-order: odd;
+$table-striped-columns-order: even;
+
+$table-group-separator-color: currentcolor;
+
+$table-caption-color: var(--#{$prefix}secondary-color);
+
+$table-bg-scale: -80%;
+
+/* Thêm CSS cho bảng và phân trang */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+.table th,
+.table td {
+  padding: 0.625em;
+  text-align: center;
+}
+.table th {
+  background-color: #f2f2f2;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+.pagination a {
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25em;
+}
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* CSS for Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeAddModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeAddModal:hover,
+.closeAddModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content form label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+  width: 100%;
+}
+
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-content form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-content form button:hover {
+  background-color: #45a049;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.update-btn {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.update-btn:hover {
+  background-color: #45a049 !important;
+}
+
+.delete-btn {
+  background-color: #f44336 !important;
+  color: white !important;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f !important;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmYes {
+  background-color: #f44336;
+  color: white;
+}
+#confirmYes:hover {
+  opacity: 80%;
+}
+
+#confirmNo {
+  background-color: gainsboro;
+  color: white;
+}
+#confirmNo:hover {
+  opacity: 80%;
+}
+
+.container-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.container-row .title {
+  font-size: 30px;
+  color: #b7b7b7;
+}
+
+.container-row .addProduct-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.container-row .addProduct-btn:hover {
+  background-color: #45a049 !important;
+}
+
+th {
+  cursor: pointer;
+}
+
+
+
+// search css 
+.form-control {
+  width: 20% !important;
+}
