@@ -12,3 +12,4 @@ Link slide:
 https://docs.google.com/presentation/d/1VHm-KXA0nOxEQXwc9APUNRP3e8RwXIsH/edit?usp=sharing&ouid=117164041570610188397&rtpof=true&sd=true
 
 Link báo cáo: 
+https://drive.google.com/file/d/1ptV4GwRaaG1fzl5hVjAzsJFqpRu3udk6/view?usp=sharing
