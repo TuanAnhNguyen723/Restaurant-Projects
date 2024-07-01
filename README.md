@@ -1,5 +1,10 @@
 # Xây dựng Website bán đồ ăn Tây Âu
 Website: https://tunawebsite.top/
+
+Cách truy cập vào tài khoản admin: 
+Username: admin 
+Password: 123
+
 ## Thành viên nhóm: 
 - Nguyễn Tuấn Anh
 - Nguyễn Phương Nga
